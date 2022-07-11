@@ -8,26 +8,25 @@ body{
 }
 .header{
     padding: 15px 0;
-    background-color: #ffffff;
+    background-color: rgb(163, 88, 234);
 }
 .header-content{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
+    border: 0px solid green;
 }
 .logo-content{
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid goldenrod;
+    border: 0px solid goldenrod;
     width:80%;
 }
 .logo-content img{
     width: 42px;    
-    border: 1px solid gold;
-    border-radius: 0.5px;
+    margin-right: 6px;
 }
 .emp-text{
     font: normal normal bold 20px/25px Montserrat;
@@ -35,6 +34,7 @@ body{
     letter-spacing: 0px;
     color:#82a70c;
     text-transform:capitalize;
+    text-shadow: 1px 1px black;
 }
 .emp-payroll{
     color: #42515f;
@@ -42,7 +42,7 @@ body{
 /* -- UC2-- */ 
 .form-content {
     min-height: calc(100% - 80px);
-    background-color: #f7f7f7;
+    background-color: skyblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ body{
 .form {
     width: 65%;
     padding: 44px 60px;
-    background: #ffffff 0% 0% no-repeat padding-box;
+    background: rgb(155, 233, 251) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 8px;
     opacity: 1;
@@ -82,7 +82,7 @@ label{
     font-size: 16px;
     color: #42515f;
     opacity: 1;
-    font-family: Roboto;
+    font-family: Roboto;    
 }
 .input{
     width: 100%;
@@ -116,4 +116,84 @@ select{
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
+}
+/* --UC6: -- */
+.buttonParent{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;   
+}
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    background-color: white;
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: slateblue;
+    color: white;
+}
+.submitButton{
+    border: none;
+    background-color: #f5f5f5;
+    margin-right: 30px;
+}
+.cancelButton{
+    text-decoration: none;
+    text-align: center;    
+}
+.resetButton{
+    color: Red;    
+}
+div select:hover{
+    color: rgb(4, 4, 83);
+
+}
+@media only screen and (max-width: 960px){
+    .cancelButton {
+        margin-left: 0px;
+    }
+    .form{
+        width: 85%;
+        padding: 44px 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .form{
+        margin-top: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .uploadButton{
+        justify-content: flex-start;
+    }
+    .profile-radio-content{
+        flex-flow: wrap;
+    }
+    .submit-reset {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .submitButton {
+        margin: 0;
+    }
+    .buttonParent {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
