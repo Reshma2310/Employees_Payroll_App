@@ -13,7 +13,7 @@
     <header class="header-content header">
         <div class="logo-content">
             <img src="../assets/logo.png" alt ="logo">
-            <div>
+            <div class="logoText">
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
@@ -79,7 +79,7 @@
                 <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output text" for="salary">400000</output>
             </div>
-            <!-- UC5:Specify Start Date with Day, Month & Year as select input item -->
+            <!-- UC5: Specify Start Date with Day, Month & Year as select input item -->
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
                 <div>
@@ -137,6 +137,18 @@
                         <option value="2017">2017</option>
                         <option value="2016">2016</option>
                     </select>
+                </div>
+            </div>
+            <!-- UC6: Adding Buttons, Notes & Media Queries -->
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea class="input" id="notes" name="notes" placeholder="Comment your thought..." style="height:100px;"></textarea>
+            </div>
+            <div class="buttonParent">
+                <a href="./index.html" class="button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button type="button" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
                 </div>
             </div>
         </form>
