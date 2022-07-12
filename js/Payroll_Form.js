@@ -7,7 +7,7 @@
     output.textContent = salary.value;
     });
 }
-//Name Validation
+//UC7: Name Validation
 {
     const name = document.querySelector('#name');
     const message = document.querySelector('.error-output');
