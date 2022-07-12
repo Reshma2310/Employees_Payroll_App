@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Payroll Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
+    <title>Employee Payroll Form</title>
+    <script defer src="../js/EmployeePayroll.js"></script>
+    <script defer src="../js/Payroll_Form.js"></script>
 </head>
 <body>
     <!-- UC1: Employee Payroll Logo -->
@@ -25,7 +27,8 @@
             <div class="form-head"> Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Enter Your Name" required>                               
+                <input class="input" type="text" id="name" name="name" placeholder="Enter Your Name" required="">
+                <error class="error-output" for="name"></error> 
             </div>
             <!-- UC3 -->
             <div class="row-content">
@@ -155,14 +158,6 @@
                 </div>
             </div>
         </form>
-    </div>
-    <script>        
-        const salary = document.querySelector('#salary');
-        const output = document.querySelector('.salary-output');
-        output.textContent = salary.value;
-        salary.addEventListener('input', function() {
-            output.textContent = salary.value;
-        });
-    </script>   
+    </div>    
 </body>
 </html>
