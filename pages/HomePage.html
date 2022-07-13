@@ -13,7 +13,7 @@
     <!-- UC1: Create an Employee Payroll System Homepage UI-->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../assets/logo.png"alt="">
+            <img src="../assets/Images/logo.png" alt="">
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
@@ -29,6 +29,36 @@
             <a href="../pages/index.html" class="add-button">
             <img src="../assets/Images/add-24px.svg" alt="">Add Employee</a>
         </div> <!-- Header Ended -->
+        <!-- View Employee Payroll Details in a Tabular Format -->
+        <div class="table-main">
+            <table id="table-display" class="table">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td><img class="profile" alt=""
+                        src="../assets/Images/employee1.png">
+                    </td>
+                    <td>Reshma</td>
+                    <td>Female</td>
+                    <td><div class="dept-label">Designer</div></td>
+                    <td>400000</td>
+                    <td>15 July 2021</td>
+                    <td>
+                        <img id="1" onclick="remove(this)" alt="delete"
+                             src="../assets/Images/delete-black-18dp.svg">
+                        <img id="1" onclick="update(this)" alt="edit"
+                             src="../assets/Images/update-black-18dp.svg">
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

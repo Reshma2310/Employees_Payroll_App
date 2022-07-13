@@ -13,9 +13,11 @@ body{
 .header-content{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: 0px solid green;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
 }
 .logo-content{
     display: flex;
@@ -46,7 +48,7 @@ body{
     min-height: calc(100vh-80px);
     background-color: #f7f7f7;
     padding: 30px 0 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 .header-content{
     display: flex;
@@ -84,4 +86,66 @@ body{
     outline: none;
     cursor: pointer;
     text-decoration: none;
+}
+/* -- UC3 -- */
+.table-main {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    min-width: 800px;
+}
+td, th {
+    text-align: left;
+    padding: 5px 8px;
+}
+th {
+    background: #76797b 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+    text-align: left;
+    font: normal normal normal 22px/29px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    /*text-transform: uppercase;*/
+    opacity: 1;
+    border: 0px solid #dddddd;
+}
+tr:not(:first-child){
+    background: white;
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+.actions{
+    display: table-cell;
+    align-items: center;
+}
+td{
+    color: #3d3d3d;
+    opacity: 1;
+}
+td:first-child{
+    display: flex;
+    align-items: center;
+}
+td img:first-child{
+    margin-right: 10px;
+    border-radius: 100%;
+}
+td img{
+    cursor: pointer;
+}
+.department{
+    background: yellow;
+    border-radius: 40px;
+    width: fit-content;
+    padding: 1px 7px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 8px;
 }
