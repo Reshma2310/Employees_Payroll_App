@@ -138,8 +138,8 @@ td img:first-child{
 td img{
     cursor: pointer;
 }
-.department{
-    background: yellow;
+.dept-label{
+    background: rgb(182, 207, 241);
     border-radius: 40px;
     width: fit-content;
     padding: 1px 7px;
