@@ -83,3 +83,21 @@ const getSelectedValue = (propertyValue)=> {
     })
     return setItem;
 }
+// UC 10: Reset the Employee Payroll Form
+const resetForm = () => {
+    setValue('#name','');
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','');
+    setValue('#notes','');
+    setValue('#day','1');
+    setValue('#month','January');
+    setValue('#year','2022');
+}
+const unsetSelectedValues = (propertyValue) =>{
+    let allItems = document.querySelectorAll(propertyValue);
+    allItems.forEach(item =>{
+        item.checked = false;
+    });
+}
