@@ -17,10 +17,9 @@ class EmployeePayrollData {
         if (nameRegex.test(name)) {
             this._name=name;
         } else {
-            throw "Name is incorrect";
+            throw "Invalid, Name should be like Ex: Rose";
         }
     }
-
     get profilePic(){
         return this._profilePic;
     }

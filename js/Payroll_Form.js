@@ -20,11 +20,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 })
 
-/* -- UC8: On Save create Employee Payroll Object -- */
+// UC8: On Save create Employee Payroll Object 
 const save = () => {    
-    let employeePayrollData = createEmployeePayroll();
-    alert(JSON.stringify(employeePayrollData));
+    try{
+        let employeePayrollData = createEmployeePayroll();
+        // UC9: Saving Employee Payroll to Local Storage
+        createAndUpdateStorage(employeePayrollData);
+    }
+    catch (e) {
+        return;
+    }    
 }
+function createAndUpdateStorage(employeePayrollData){
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployePayrollList"));
+    if(employeePayrollList != undefined){
+        employeePayrollList.push(employeePayrollData);
+    }else{
+        employeePayrollList = [employeePayrollData]
+    }    
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
+    alert(JSON.stringify(employeePayrollList));
+}
+
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
     try {
@@ -46,6 +63,7 @@ const createEmployeePayroll = () => {
     employeePayrollData.salary = getInputValueId('#salary');    
     employeePayrollData.notes = getInputValueId('#notes');
     employeePayrollData.id = new Date().getTime()+1;
+    alert(JSON.stringify(employeePayrollData));
     return employeePayrollData;
 }
 const getInputValueId = (id) => {
