@@ -52,9 +52,16 @@ class EmployeePayrollData {
     }
     get startDate(){
         return this._startDate;
-    }    
+    } 
     set startDate(startDate){
-        this._startDate=startDate;
+        let currentDate = new Date();
+        if(startDate <= currentDate){
+            this._startDate = startDate;
+        }
+        else{
+            alert("Invalid (Future Date)");
+            throw "Invalid Date"
+        }        
     }
     toString() {
         return "id =" +this.id + ", Name' " + this.name + ", Gender=' " +this.gender +

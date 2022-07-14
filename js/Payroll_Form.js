@@ -39,8 +39,8 @@ function createAndUpdateStorage(employeePayrollData){
     }else{
         employeePayrollList = [employeePayrollData]
     }    
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
-    alert(JSON.stringify(employeePayrollList));
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));    
 }
 
 const createEmployeePayroll = () => {
@@ -51,14 +51,21 @@ const createEmployeePayroll = () => {
     } catch (e) {
         setTextValue('.text-error', e);
         throw e;
-    }    
+    }
+    try {
+        let date = getInputValueId('#day') + " " + getInputValueId('#month') + " " + getInputValueId('#year');
+        employeePayrollData.startDate = new Date(Date.parse(date));
+        setTextValue('.date-error', "");
+    } catch (e) {
+        setTextValue('.date-error', e);
+    }
     employeePayrollData.profilePic = getSelectedValue('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValue('[name=gender]').pop();
     employeePayrollData.department = getSelectedValue('[name=department]');
     employeePayrollData.salary = getInputValueId('#salary');    
     employeePayrollData.notes = getInputValueId('#notes');
-    let date = getInputValueId('#day') + " " + getInputValueId('#month') + " " + getInputValueId('#year');
-        employeePayrollData.startDate = new Date(Date.parse(date)).toLocaleDateString();
+    //let date = getInputValueId('#day') + " " + getInputValueId('#month') + " " + getInputValueId('#year');
+      //  employeePayrollData.startDate = new Date(Date.parse(date)).toLocaleDateString();
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
