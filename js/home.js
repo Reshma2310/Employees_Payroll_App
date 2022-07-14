@@ -1,12 +1,23 @@
+let empPayrollList;
 window.addEventListener('DOMContentLoaded', (event) => {
+    //UC16: Get data from local storage
+    empPayrollList = getEmployeePayrollDataFromStorage();
+    document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
 });
 
+const getEmployeePayrollDataFromStorage = () => {
+    return localStorage.getItem('EmployeePayrollList') ?
+                        JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
+}
+// UC14: Template Literals (ES6) feature
 const createInnerHtml = () => {
+    // UC15: Get details from JSON-file
+    if (empPayrollList.length == 0) return;
     const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
                        "<th>Salary</th><th>Start Date</th><th>Actions</th>";
     let innerHtml = `${headerHtml}`;
-    let empPayrollList = createEmployeePayrollJSON();
+    //let empPayrollList = createEmployeePayrollJSON();
     for (const empPayrollData of empPayrollList) {
         innerHtml = `${innerHtml}  
         <tr>
@@ -19,8 +30,8 @@ const createInnerHtml = () => {
             <td>${empPayrollData._salary}</td>
             <td>${empPayrollData._startDate}</td>
             <td>
-                <img id="1" onclick="remove(this)" alt="delete" src="../assets/Images/delete-black-18dp.svg">
-                <img id="1" onclick="update(this)" alt="edit" src="../assets/Images/update-black-18dp.svg">
+                <img name="${empPayrollData._id}" onclick="remove(this)" alt="delete" src="../assets/Images/delete-black-18dp.svg">
+                <img name="${empPayrollData._id}" onclick="update(this)" alt="edit" src="../assets/Images/update-black-18dp.svg">
             </td>
         </tr>
         `;
@@ -71,7 +82,6 @@ const createEmployeePayrollJSON = () => {
     ];
     return empPayrollListLocal;
 }
-
 const getDeptHtml = (deptList) => {
     let deptHtml = '';
     for (const dept of deptList) {

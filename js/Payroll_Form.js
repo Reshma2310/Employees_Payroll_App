@@ -31,8 +31,9 @@ const save = () => {
         return;
     }    
 }
+
 function createAndUpdateStorage(employeePayrollData){
-    let employeePayrollList = JSON.parse(localStorage.getItem("EmployePayrollList"));
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
     if(employeePayrollList != undefined){
         employeePayrollList.push(employeePayrollData);
     }else{
@@ -45,25 +46,20 @@ function createAndUpdateStorage(employeePayrollData){
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
     try {
-        employeePayrollData.name = getInputValueId("#name");
+        employeePayrollData.name = getInputValueId('#name');
         setTextValue('.text-error', "");
     } catch (e) {
         setTextValue('.text-error', e);
-    }
-    try {
-        let date = getInputValueId('#day') + " " + getInputValueId('#month') + " " + getInputValueId('#year');
-        employeePayrollData.startDate = new Date(Date.parse(date));
-        setTextValue('.date-error', "");
-    } catch (e) {
-        setTextValue('.date-error', e);
-    }
+        throw e;
+    }    
     employeePayrollData.profilePic = getSelectedValue('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValue('[name=gender]').pop();
     employeePayrollData.department = getSelectedValue('[name=department]');
     employeePayrollData.salary = getInputValueId('#salary');    
     employeePayrollData.notes = getInputValueId('#notes');
-    employeePayrollData.id = new Date().getTime()+1;
-    alert(JSON.stringify(employeePayrollData));
+    let date = getInputValueId('#day') + " " + getInputValueId('#month') + " " + getInputValueId('#year');
+        employeePayrollData.startDate = new Date(Date.parse(date)).toLocaleDateString();
+    alert(employeePayrollData.toString());
     return employeePayrollData;
 }
 const getInputValueId = (id) => {
@@ -91,13 +87,17 @@ const resetForm = () => {
     unsetSelectedValues('[name=department]');
     setValue('#salary','');
     setValue('#notes','');
-    setValue('#day','1');
-    setValue('#month','January');
-    setValue('#year','2022');
+    setTextValue('#day','Day');
+    setTextValue('#month','Month');
+    setTextValue('#year','Year');
 }
+
+const setValue = (id, value) =>{
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
 const unsetSelectedValues = (propertyValue) =>{
     let allItems = document.querySelectorAll(propertyValue);
-    allItems.forEach(item =>{
-        item.checked = false;
-    });
+    allItems.forEach(item => item.checked = false);
 }
