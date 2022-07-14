@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     createInnerHtml();
 });
-
+// get Details from js file using Template Literals
 const createInnerHtml = () => {
     const innerHtml = `
     <tr>
