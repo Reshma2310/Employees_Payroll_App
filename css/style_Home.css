@@ -42,6 +42,7 @@ body{
     color: #42515f;
 }
 /* -- UC12 --*/
+
 .main-content{
     display: flex;
     flex-direction: column;
@@ -66,7 +67,7 @@ body{
     opacity: 1;
 }
 .emp-count{
-    background-color: #82a70c;
+    background-color: #96ad4b;
     color: #ffffff;
     border-radius: 42%;
     font-size: 16px;
@@ -79,7 +80,7 @@ body{
     letter-spacing: 0px;
     color: #ffffff;
     opacity: 1;
-    background: #82a70c 0% 0% no-repeat padding-box;
+    background: rgb(53, 110, 232) 0% 0% no-repeat padding-box;
     border: none;
     border-radius: 5px;
     padding: 5px 18px;
@@ -104,7 +105,7 @@ td, th {
     padding: 5px 8px;
 }
 th {
-    background: #76797b 0% 0% no-repeat padding-box;
+    background: #8d8b8e 0% 0% no-repeat padding-box;
     border-radius: 3px 3px 0px 0px;
     text-align: left;
     font: normal normal normal 22px/29px Roboto;

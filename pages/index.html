@@ -21,7 +21,7 @@
     </header>
     <!-- UC2: Creating Form Header & Name input field -->
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false" onreset="resetForm()">
+        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
             <div class="form-head">
                Employee Payroll form
             </div>
@@ -86,7 +86,7 @@
             <!--UC5 Specify Start Date with Day, Month & Year as select input item -->
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
-                <div>
+                <div id="date">
                     <select id="day" name="Day">
                         <option value="">Day</option>
                         <option value="1">1</option>
@@ -146,7 +146,7 @@
                         <option value="2018">2018</option>
                         <option value="2017">2017</option>
                     </select>
-                    <error-output class="date-error" for="error"></error-output>
+                    <error-output class="date-error" for="startDate"></error-output>    
                 </div>
             </div>
             <!-- UC6: Adding Buttons, Notes & Media Queries -->
