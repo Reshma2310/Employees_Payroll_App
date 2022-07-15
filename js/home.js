@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     empPayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
+    localStorage.removeItem('editEmp');
 });
 
 const getEmployeePayrollDataFromStorage = () => {
@@ -14,7 +15,7 @@ const getEmployeePayrollDataFromStorage = () => {
 const createInnerHtml = () => {
     // UC15: Get details from JSON-file
     if (empPayrollList.length == 0) return;
-    const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
+    const headerHtml = "<th>Profile</th><th>Name</th><th>Gender</th><th>Department</th>"+
                        "<th>Salary</th><th>Start Date</th><th>Actions</th>";
     let innerHtml = `${headerHtml}`;
     //let empPayrollList = createEmployeePayrollJSON();
