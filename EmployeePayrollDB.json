@@ -1,0 +1,87 @@
+{
+  "EmployeePayrollDB": [
+    {
+      "_name": "Reshma",
+      "_profilePic": "../assets/Images/employee1.png",
+      "_gender": "female",
+      "_department": [
+        "Designer",
+        "Developer"
+      ],
+      "_salary": "435000",
+      "_notes": "Wow...Nice...",
+      "_startDate": "30 Jun 2022",
+      "id": 2
+    },
+    {
+      "_name": "Tanvir",
+      "_profilePic": "../assets/Images/employee1.png",
+      "_gender": "female",
+      "_department": [
+        "Designer",
+        "Developer",
+        "Engineer"
+      ],
+      "_salary": "447000",
+      "_notes": "Nice...",
+      "_startDate": "11 Jul 2022",
+      "id": 3
+    },
+    {
+      "_name": "Basith",
+      "_profilePic": "../assets/Images/employee4.png",
+      "_gender": "male",
+      "_department": [
+        "Developer",
+        "Engineer"
+      ],
+      "_salary": "450000",
+      "_notes": "Wow...",
+      "_startDate": "8 Jul 2022",
+      "id": 4
+    },
+    {
+      "_name": "Dastagiri",
+      "_profilePic": "../assets/Images/employee4.png",
+      "_gender": "male",
+      "_department": [
+        "HR",
+        "Designer",
+        "Developer",
+        "Engineer",
+        "Others"
+      ],
+      "_salary": "440000",
+      "_notes": "Best...",
+      "_startDate": "26 Jun 2022",
+      "id": 5
+    },
+    {
+      "_name": "Khajabi",
+      "_profilePic": "../assets/Images/employee3.png",
+      "_gender": "female",
+      "_department": [
+        "HR",
+        "Designer",
+        "Developer"
+      ],
+      "_salary": "445000",
+      "_notes": "Excellet...",
+      "_startDate": "13 Jul 2022",
+      "id": 6
+    },
+    {
+      "_name": "Vahidh",
+      "_profilePic": "../assets/Images/employee1.png",
+      "_gender": "female",
+      "_department": [
+        "Designer",
+        "Developer"
+      ],
+      "_salary": "420000",
+      "_notes": "Fantastic...",
+      "_startDate": "10 Jul 2022",
+      "id": 7
+    }
+  ]
+}

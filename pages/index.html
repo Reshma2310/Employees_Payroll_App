@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">    
     <title>Employee Payroll Form</title>    
+    <script defer src="../js/Payroll_Form.js"></script>
 </head>
 <body>
     <!-- UC1: Employee Payroll Logo -->
@@ -155,7 +156,7 @@
                 <textarea class="input" id="notes" name="notes" placeholder="Comment your thought..." style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
-                <a href="./index.html" class="resetButton button cancelButton">Cancel</a>
+                <a href="./index.html" id="cancelButton" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                     <button type="reset" class="resetButton button">Reset</button>
@@ -163,7 +164,8 @@
             </div>
         </form>
     </div>
-    <script type="text/javascript" src="../js/Payroll_Form.js"></script>
-    <script type="text/javascript" src="../js/EmployeePayroll.js"></script>
+    <script src="../js/utility.js"></script>
+    <script src="../js/siteProperties.js"></script>
+    <script src="../js/Http_Services.js"></script>    
 </body>
 </html>
